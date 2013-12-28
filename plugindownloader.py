@@ -17,8 +17,7 @@ __module_name__ = "PluginDownloader"
 __module_version__ = "1.0"
 __module_description__ = "Downloads a plugin from the XChat-Plugin-Collection"
 
-URL = "https://github.com/XChat-Plugin-Collection/python"
-GET_URL = "https://raw.github.com/XChat-Plugin-Collection/python/master/%(plugin)s.py"
+GET_URL = "https://raw.github.com/XChat-Plugin-Collection/python/master/%(plugin)s.py" # You can change this to your desired repo
 
 if sys.platform == "win32":
 	ADDONS_DIR = xchat.get_info("xchatdir") + "\\addons\\"
@@ -31,7 +30,7 @@ def percentage(part, whole):
 def DownloadPlugins(Plugins):
 	for plugin in Plugins:
 		try:
-			urllib2.urlopen(URL+plugin)
+			urllib2.urlopen(GET_URL % {"plugin":plugin})
 		except urllib2.HTTPError:
 			print "plugin "+plugin+" does not exist!"
 			continue
@@ -50,7 +49,7 @@ def PLUD(word, word_eol, userdata):
 		return xchat.EAT_ALL
 		
 	if word[1] == "install":
-		if len(word) is not 2:
+		if len(word) == 2:
 			print "Usage: /PLUD install <plugins>"
 			return xchat.EAT_ALL
 			
@@ -59,7 +58,7 @@ def PLUD(word, word_eol, userdata):
 		return xchat.EAT_ALL
 		
 	elif word[1] == "remove":
-		if len(word) is not 2:
+		if len(word) == 2:
 			print "Usage: /PLUD remove <plugins>"
 			return xchat.EAT_ALL
 			
