@@ -27,3 +27,4 @@ def atou(word, word_eol, data):
     xchat.command("say "+ widen(word_eol[1].decode('utf-8')).encode('utf-8'))
     
 xchat.hook_command("atou",atou,help="/atou - Converts normal test to fullwidth")
+print "Atou script loaded"
