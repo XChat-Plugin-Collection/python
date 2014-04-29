@@ -19,4 +19,4 @@ Controllers:
  * You can use IRC control codes too
  
  Example: is playing %(randcolor)s%(track)s%(normal)s by %(randcolor2)s%(artist)s%(normal)s in 03Spotify
- (note that there is a invisible character before 03Spotify)
+ (note that there is an invisible character before 03Spotify)
