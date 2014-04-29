@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import xchat
 
+# Ascii to Unicode - Made for Seth "Takeru" Lunsford
 # Copyright (c) 2014, Avail
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
